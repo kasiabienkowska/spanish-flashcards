@@ -3,16 +3,16 @@ export interface Card {
   es: string;
   pl: string;
   category: string;
-  /** Pudełko Leitnera: 0 = nowa, 1–5 = poziom opanowania */
+  /** Leitner box: 0 = new, 1–5 = mastery level */
   box: number;
-  /** Data następnej powtórki (YYYY-MM-DD) */
+  /** Next review date (YYYY-MM-DD) */
   due: string;
-  /** Dzień, w którym karta pierwszy raz pojawiła się w nauce */
+  /** Day the card was first studied */
   introduced?: string;
 }
 
 export interface StudyStats {
-  /** Dni (YYYY-MM-DD), w których była nauka */
+  /** Days (YYYY-MM-DD) with at least one study session */
   studyDays: string[];
   reviewedToday: number;
   lastStudyDay: string | null;

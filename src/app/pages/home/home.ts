@@ -31,11 +31,11 @@ import { DeckService, NEW_CARDS_PER_DAY } from '../../services/deck.service';
     </section>
 
     @if (deck.dueCards().length + deck.newCards().length > 0) {
-      <a class="btn primary big" routerLink="/nauka">Zaczynamy naukę →</a>
+      <a class="btn primary big" routerLink="/study">Zaczynamy naukę →</a>
     } @else {
       <div class="done">
         <p>🎉 Na dziś wszystko zrobione! Wróć jutro.</p>
-        <a class="btn" routerLink="/slowka">Dodaj własne słówka</a>
+        <a class="btn" routerLink="/words">Dodaj własne słówka</a>
       </div>
     }
 

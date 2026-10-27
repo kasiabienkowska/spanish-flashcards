@@ -69,7 +69,7 @@ export class Study {
 
   protected readonly current = computed(() => {
     const id = this.queue()[0]?.id;
-    // bierzemy świeżą wersję karty z talii (np. zaktualizowane pudełko)
+    // read the fresh card from the deck (e.g. updated box)
     return id ? this.deck.cards().find((c) => c.id === id) : undefined;
   });
 
@@ -102,7 +102,7 @@ export class Study {
     if (!knew) this.missed.add(card.id);
     this.answered.update((n) => n + 1);
     this.flipped.set(false);
-    // błędne karty wracają na koniec kolejki, aż zostaną zapamiętane
+    // missed cards go to the back of the queue until they're remembered
     this.queue.set(again ? [...rest, card] : rest);
   }
 

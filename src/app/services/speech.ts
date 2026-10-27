@@ -1,4 +1,4 @@
-/** Czyta tekst na głos po hiszpańsku (Web Speech API, działa w większości przeglądarek) */
+/** Reads text aloud in Spanish (Web Speech API, supported by most browsers) */
 export function speakSpanish(text: string): void {
   if (!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();

@@ -5,7 +5,7 @@ import { Words } from './pages/words/words';
 
 export const routes: Routes = [
   { path: '', component: Home, title: 'Fiszki – hiszpański' },
-  { path: 'nauka', component: Study, title: 'Nauka – Fiszki' },
-  { path: 'slowka', component: Words, title: 'Słówka – Fiszki' },
+  { path: 'study', component: Study, title: 'Nauka – Fiszki' },
+  { path: 'words', component: Words, title: 'Słówka – Fiszki' },
   { path: '**', redirectTo: '' },
 ];

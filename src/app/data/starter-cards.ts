@@ -1,5 +1,4 @@
 export const STARTER_CARDS: { es: string; pl: string; category: string }[] = [
-  // Powitania
   { es: 'hola', pl: 'cześć', category: 'Powitania' },
   { es: 'buenos días', pl: 'dzień dobry', category: 'Powitania' },
   { es: 'buenas noches', pl: 'dobranoc', category: 'Powitania' },
@@ -8,7 +7,6 @@ export const STARTER_CARDS: { es: string; pl: string; category: string }[] = [
   { es: 'gracias', pl: 'dziękuję', category: 'Powitania' },
   { es: 'por favor', pl: 'proszę', category: 'Powitania' },
   { es: 'lo siento', pl: 'przepraszam', category: 'Powitania' },
-  // Jedzenie
   { es: 'el pan', pl: 'chleb', category: 'Jedzenie' },
   { es: 'el agua', pl: 'woda', category: 'Jedzenie' },
   { es: 'la leche', pl: 'mleko', category: 'Jedzenie' },
@@ -19,7 +17,6 @@ export const STARTER_CARDS: { es: string; pl: string; category: string }[] = [
   { es: 'la cerveza', pl: 'piwo', category: 'Jedzenie' },
   { es: 'el desayuno', pl: 'śniadanie', category: 'Jedzenie' },
   { es: 'la cena', pl: 'kolacja', category: 'Jedzenie' },
-  // Dom
   { es: 'la casa', pl: 'dom', category: 'Dom' },
   { es: 'la cocina', pl: 'kuchnia', category: 'Dom' },
   { es: 'la cama', pl: 'łóżko', category: 'Dom' },
@@ -27,7 +24,6 @@ export const STARTER_CARDS: { es: string; pl: string; category: string }[] = [
   { es: 'la silla', pl: 'krzesło', category: 'Dom' },
   { es: 'la ventana', pl: 'okno', category: 'Dom' },
   { es: 'la puerta', pl: 'drzwi', category: 'Dom' },
-  // Rodzina
   { es: 'la madre', pl: 'matka', category: 'Rodzina' },
   { es: 'el padre', pl: 'ojciec', category: 'Rodzina' },
   { es: 'el hermano', pl: 'brat', category: 'Rodzina' },
@@ -35,7 +31,6 @@ export const STARTER_CARDS: { es: string; pl: string; category: string }[] = [
   { es: 'el hijo', pl: 'syn', category: 'Rodzina' },
   { es: 'la hija', pl: 'córka', category: 'Rodzina' },
   { es: 'el amigo', pl: 'przyjaciel', category: 'Rodzina' },
-  // Czasowniki
   { es: 'ser', pl: 'być (cecha stała)', category: 'Czasowniki' },
   { es: 'estar', pl: 'być (stan, miejsce)', category: 'Czasowniki' },
   { es: 'tener', pl: 'mieć', category: 'Czasowniki' },
@@ -48,7 +43,6 @@ export const STARTER_CARDS: { es: string; pl: string; category: string }[] = [
   { es: 'querer', pl: 'chcieć, kochać', category: 'Czasowniki' },
   { es: 'poder', pl: 'móc', category: 'Czasowniki' },
   { es: 'saber', pl: 'wiedzieć, umieć', category: 'Czasowniki' },
-  // Czas
   { es: 'hoy', pl: 'dzisiaj', category: 'Czas' },
   { es: 'mañana', pl: 'jutro', category: 'Czas' },
   { es: 'ayer', pl: 'wczoraj', category: 'Czas' },
@@ -57,7 +51,6 @@ export const STARTER_CARDS: { es: string; pl: string; category: string }[] = [
   { es: 'ahora', pl: 'teraz', category: 'Czas' },
   { es: 'siempre', pl: 'zawsze', category: 'Czas' },
   { es: 'nunca', pl: 'nigdy', category: 'Czas' },
-  // Przymiotniki
   { es: 'grande', pl: 'duży', category: 'Przymiotniki' },
   { es: 'pequeño', pl: 'mały', category: 'Przymiotniki' },
   { es: 'bueno', pl: 'dobry', category: 'Przymiotniki' },

@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "hiszpanski-fiszki": {
+    "spanish-flashcards": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "hiszpanski-fiszki:build:production"
+              "buildTarget": "spanish-flashcards:build:production"
             },
             "development": {
-              "buildTarget": "hiszpanski-fiszki:build:development"
+              "buildTarget": "spanish-flashcards:build:development"
             }
           },
           "defaultConfiguration": "development"

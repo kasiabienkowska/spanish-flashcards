@@ -2,10 +2,10 @@ import { Injectable, computed, effect, signal } from '@angular/core';
 import { Card, StudyStats } from '../models/card';
 import { STARTER_CARDS } from '../data/starter-cards';
 
-const CARDS_KEY = 'fiszki.cards';
-const STATS_KEY = 'fiszki.stats';
+const CARDS_KEY = 'flashcards.cards';
+const STATS_KEY = 'flashcards.stats';
 
-/** Ile dni czekać na powtórkę po trafieniu do danego pudełka */
+/** Days until the next review after a card lands in a given box */
 const BOX_INTERVALS = [0, 1, 2, 4, 7, 14];
 export const MAX_BOX = BOX_INTERVALS.length - 1;
 export const NEW_CARDS_PER_DAY = 10;
@@ -45,7 +45,7 @@ export class DeckService {
     [...new Set(this.cards().map((c) => c.category))].sort(),
   );
 
-  /** Powtórki na dziś: karty już poznane, których termin minął */
+  /** Reviews for today: already introduced cards that are due */
   readonly dueCards = computed(() =>
     this.cards().filter((c) => c.box > 0 && c.due <= today()),
   );
@@ -55,7 +55,7 @@ export class DeckService {
     return s.lastStudyDay === today() ? s.reviewedToday : 0;
   });
 
-  /** Nowe karty na dziś, z limitem dziennym (pomniejszonym o już zaczęte dziś) */
+  /** New cards for today, capped by the daily limit (minus those already started today) */
   readonly newCards = computed(() => {
     const startedToday = this.cards().filter((c) => c.box > 0 && c.introduced === today()).length;
     const limit = Math.max(0, NEW_CARDS_PER_DAY - startedToday);
@@ -82,12 +82,12 @@ export class DeckService {
     effect(() => localStorage.setItem(STATS_KEY, JSON.stringify(this.stats())));
   }
 
-  /** Zestaw na dzisiejszą sesję: najpierw powtórki, potem nowe słówka */
+  /** Today's session: reviews first, then new cards */
   buildSession(): Card[] {
     return shuffle([...this.dueCards()]).concat(this.newCards());
   }
 
-  /** Zapisuje odpowiedź. Zwraca true, jeśli karta ma wrócić jeszcze w tej sesji. */
+  /** Records an answer. Returns true if the card should come back in this session. */
   answer(cardId: string, knew: boolean): boolean {
     const t = today();
     this.cards.update((cards) =>
